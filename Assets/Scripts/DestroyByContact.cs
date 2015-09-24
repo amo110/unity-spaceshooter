@@ -1,9 +1,8 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyByContact : MonoBehaviour {
-
-
+public class DestroyByContact : MonoBehaviour 
+{
 	public GameObject explosion;
 	public GameObject playerExplosion;
 	
@@ -14,7 +13,8 @@ public class DestroyByContact : MonoBehaviour {
 			return;
 		}
 		Instantiate(explosion, transform.position, transform.rotation);
-		if (other.tag == "Player") {
+		if (other.tag == "Player")
+		{
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
 		}
 		Destroy (other.gameObject);

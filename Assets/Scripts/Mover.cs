@@ -4,9 +4,9 @@ using System.Collections;
 public class Mover : MonoBehaviour 
 {
 	public float speed;
-
+	
 	void Start ()
 	{
-		Rigidbody.velocity = Transform.forward * speed;
+		GetComponent<Rigidbody>().velocity = transform.forward * speed;
 	}
 }
